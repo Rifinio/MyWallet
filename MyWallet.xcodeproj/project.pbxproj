@@ -75,8 +75,8 @@
 		1912430A232D73C60070912E /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				19D53629232D811A005EE3E3 /* View */,
 				1912430B232D73C60070912E /* AppDelegate.swift */,
-				1912430D232D73C60070912E /* AccountViewController.swift */,
 				19124312232D73C70070912E /* Assets.xcassets */,
 				19124314232D73C70070912E /* LaunchScreen.storyboard */,
 				19124317232D73C70070912E /* Info.plist */,
@@ -91,6 +91,14 @@
 				19124322232D73C70070912E /* Info.plist */,
 			);
 			path = MyWalletTests;
+			sourceTree = "<group>";
+		};
+		19D53629232D811A005EE3E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1912430D232D73C60070912E /* AccountViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

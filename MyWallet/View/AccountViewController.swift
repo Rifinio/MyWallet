@@ -32,7 +32,7 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         title = "MyWallet"
-        
+
         setupView()
         setupConstraints()
     }
@@ -41,7 +41,6 @@ class AccountViewController: UIViewController {
     private func setupView() {
         setupNavigationBar()
         view.addSubview(mainView)
-        
     }
 
     private func setupConstraints() {
