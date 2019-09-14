@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1912430C232D73C60070912E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912430B232D73C60070912E /* AppDelegate.swift */; };
-		1912430E232D73C60070912E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912430D232D73C60070912E /* ViewController.swift */; };
-		19124311232D73C60070912E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1912430F232D73C60070912E /* Main.storyboard */; };
+		1912430E232D73C60070912E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912430D232D73C60070912E /* AccountViewController.swift */; };
 		19124313232D73C70070912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19124312232D73C70070912E /* Assets.xcassets */; };
 		19124316232D73C70070912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19124314232D73C70070912E /* LaunchScreen.storyboard */; };
 		19124321232D73C70070912E /* MyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19124320232D73C70070912E /* MyWalletTests.swift */; };
@@ -28,8 +27,7 @@
 /* Begin PBXFileReference section */
 		19124308232D73C60070912E /* MyWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1912430B232D73C60070912E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1912430D232D73C60070912E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19124310232D73C60070912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1912430D232D73C60070912E /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		19124312232D73C70070912E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19124315232D73C70070912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19124317232D73C70070912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,8 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				1912430B232D73C60070912E /* AppDelegate.swift */,
-				1912430D232D73C60070912E /* ViewController.swift */,
-				1912430F232D73C60070912E /* Main.storyboard */,
+				1912430D232D73C60070912E /* AccountViewController.swift */,
 				19124312232D73C70070912E /* Assets.xcassets */,
 				19124314232D73C70070912E /* LaunchScreen.storyboard */,
 				19124317232D73C70070912E /* Info.plist */,
@@ -179,7 +176,6 @@
 			files = (
 				19124316232D73C70070912E /* LaunchScreen.storyboard in Resources */,
 				19124313232D73C70070912E /* Assets.xcassets in Resources */,
-				19124311232D73C60070912E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1912430E232D73C60070912E /* ViewController.swift in Sources */,
+				1912430E232D73C60070912E /* AccountViewController.swift in Sources */,
 				1912430C232D73C60070912E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,14 +217,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		1912430F232D73C60070912E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19124310232D73C60070912E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		19124314232D73C70070912E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
