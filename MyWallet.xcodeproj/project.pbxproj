@@ -13,6 +13,8 @@
 		19124316232D73C70070912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19124314232D73C70070912E /* LaunchScreen.storyboard */; };
 		19124321232D73C70070912E /* MyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19124320232D73C70070912E /* MyWalletTests.swift */; };
 		19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362B232D81E9005EE3E3 /* CreditCardView.swift */; };
+		19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362D232D884D005EE3E3 /* AppStyle.swift */; };
+		19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		19124320232D73C70070912E /* MyWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletTests.swift; sourceTree = "<group>"; };
 		19124322232D73C70070912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D5362B232D81E9005EE3E3 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
+		19D5362D232D884D005EE3E3 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				1912430B232D73C60070912E /* AppDelegate.swift */,
 				19D53629232D811A005EE3E3 /* View */,
+				19D53632232D8A97005EE3E3 /* Style */,
+				19D5362F232D8A2A005EE3E3 /* Helpers */,
 				19D5362A232D817E005EE3E3 /* Ressources */,
 				19124317232D73C70070912E /* Info.plist */,
 			);
@@ -110,6 +116,22 @@
 				19124314232D73C70070912E /* LaunchScreen.storyboard */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		19D5362F232D8A2A005EE3E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		19D53632232D8A97005EE3E3 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				19D5362D232D884D005EE3E3 /* AppStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,7 +236,9 @@
 			files = (
 				1912430E232D73C60070912E /* AccountViewController.swift in Sources */,
 				1912430C232D73C60070912E /* AppDelegate.swift in Sources */,
+				19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */,
 				19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */,
+				19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
