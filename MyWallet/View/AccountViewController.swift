@@ -41,6 +41,7 @@ class AccountViewController: UIViewController {
     private func setupView() {
         setupNavigationBar()
         view.addSubview(mainView)
+
     }
 
     private func setupConstraints() {
