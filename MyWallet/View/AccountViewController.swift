@@ -36,7 +36,7 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        title = "MyWallet"
+        title = "My Wallet"
 
         setupView()
         setupConstraints()
@@ -59,13 +59,12 @@ class AccountViewController: UIViewController {
     }
 
     private func setupConstraints() {
-        let edgeInset = UIEdgeInsets(top: 50, left: 20, bottom: -20, right: -20)
-
         mainView.leadingAnchor.constraint(equalTo: view.leadingAnchor).activate()
         mainView.trailingAnchor.constraint(equalTo: view.trailingAnchor).activate()
         mainView.bottomAnchor.constraint(equalTo: view.bottomAnchor).activate()
         mainView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).activate()
         
+        let edgeInset = UIEdgeInsets(top: 50, left: 20, bottom: -20, right: -20)
         cardView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: edgeInset.top).activate()
         cardView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: edgeInset.left).activate()
         cardView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: edgeInset.right).activate()
@@ -79,7 +78,7 @@ class AccountViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.backgroundColor = .clear
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppStyle.Font.bold(24) as Any]
     }
 }
 
