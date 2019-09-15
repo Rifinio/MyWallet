@@ -28,5 +28,10 @@ struct AppStyle {
             return UIFont(name: regurlarFontName, size: size)
         }
     }
+    
+    struct Card {
+        static let backgroundImage = UIImage(named: "card-bg")
+        static let providerMaestroImage = UIImage(named: "maestro")
+    }
 }
 

@@ -32,7 +32,17 @@ class AccountViewController: UIViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
+    var viewModel: AccountViewModel!
 
+    init(viewModel: AccountViewModel) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewModel = viewModel
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
@@ -42,9 +52,7 @@ class AccountViewController: UIViewController {
         setupConstraints()
         setupData()
         
-        let dataStore = DataStore()
-        let account = dataStore.loadAccount()
-        account?.logTransactions()
+        viewModel.user?.account.logTransactions()
     }
     
     // MARK: - View setup
@@ -52,16 +60,15 @@ class AccountViewController: UIViewController {
         setupNavigationBar()
         view.addSubview(mainView)
         mainView.addSubview(cardView)
-        
-        
     }
     
     private func setupData() {
-        cardView.accountNumber = "NL30MOYO0001234567"
-        cardView.balance = "€ 45876.0"
-        cardView.holderName = "A.BOUGAMZA"
-        cardView.providerImage = UIImage(named: "maestro")
-        cardView.backgrounImage = UIImage(named: "card-bg")
+        guard let user = viewModel.user else {return}
+        cardView.accountNumber = user.account.account
+        cardView.balance = "€ \(user.account.balance)"
+        cardView.holderName = user.fullName
+        cardView.providerImage = AppStyle.Card.providerMaestroImage
+        cardView.backgrounImage = AppStyle.Card.backgroundImage
     }
 
     private func setupConstraints() {

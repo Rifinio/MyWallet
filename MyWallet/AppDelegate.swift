@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
 
-        let accountVC = AccountViewController()
+        let dataStore = DataStore()
+        let accountVM = AccountViewModel(dataStore: dataStore)
+        let accountVC = AccountViewController(viewModel: accountVM)
         let navigationVC = UINavigationController(rootViewController: accountVC)
         window?.rootViewController = navigationVC
 
