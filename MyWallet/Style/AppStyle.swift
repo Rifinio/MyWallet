@@ -13,6 +13,9 @@ struct AppStyle {
         static let white: UIColor = .white
         static let black: UIColor = .black
         static let gray = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+        static let darkGray = UIColor(red: 100/255, green: 100/255, blue: 100/255, alpha: 1)
+        static let flatRed = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1)
+        static let flatGreen = UIColor(red: 39/255, green: 174/255, blue: 96/255, alpha: 1)
     }
     struct Font {
         static let lightFontName = "GillSans-Light"
