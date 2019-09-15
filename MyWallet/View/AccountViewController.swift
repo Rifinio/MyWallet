@@ -72,8 +72,6 @@ class AccountViewController: UIViewController {
     private func setupData() {
         guard let user = viewModel.user else {return}
         cardView.setupCardFor(user: user)
-
-        user.account.logTransactions()
     }
 
     private func setupConstraints() {
@@ -142,8 +140,9 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let t = viewModel.transationAt(index: indexPath.row) else { return }
-        let vm = TransactionViewModel(transaction: t)
+        guard let t = viewModel.transationAt(index: indexPath.row),
+            let user = viewModel.user else { return }
+        let vm = TransactionViewModel(transaction: t, user: user)
         let tvc = TransactionViewController(viewModel: vm)
         navigationController?.pushViewController(tvc, animated: true)
     }

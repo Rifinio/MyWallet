@@ -17,6 +17,12 @@ class TransactionViewController: UIViewController {
         
         return l
     }()
+    let balanceAfterlabale: UILabel = {
+        let l = UILabel()
+        l.translatesAutoresizingMaskIntoConstraints = false
+        
+        return l
+    }()
     let descriptionLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
@@ -48,20 +54,10 @@ class TransactionViewController: UIViewController {
         setupConstraints()
     }
     
-    private func setupView() {
-        view.addSubview(descriptionLabel)
-        view.addSubview(amountLabel)
-        view.addSubview(accountLabel)
-        view.addSubview(dateLabel)
-
-        descriptionLabel.text = viewModel.transaction.description.capitalized
-        amountLabel.text = viewModel.transaction.amount.formattedAmount()
-        accountLabel.text = viewModel.transaction.otherAccount
-        dateLabel.text = DateFormatterUtil.formattedDateForTrasaction(date: viewModel.transaction.date)
-        
+    fileprivate func styleView() {
         dateLabel.font = AppStyle.Font.regular(15)
         dateLabel.textColor = AppStyle.Color.gray
-
+        
         descriptionLabel.font = AppStyle.Font.bold(55)
         descriptionLabel.textColor = AppStyle.Color.black
         
@@ -71,6 +67,26 @@ class TransactionViewController: UIViewController {
         amountLabel.font = AppStyle.Font.bold(50)
         amountLabel.textColor = viewModel.transaction.amount < 0 ?
             AppStyle.Color.flatRed : AppStyle.Color.flatGreen
+    }
+    
+    private func setupView() {
+        view.addSubview(descriptionLabel)
+        view.addSubview(amountLabel)
+        view.addSubview(accountLabel)
+        view.addSubview(dateLabel)
+        view.addSubview(balanceBeforelabale)
+        view.addSubview(balanceAfterlabale)
+        styleView()
+        setupData()
+    }
+    
+    private func setupData() {
+        descriptionLabel.text = viewModel.transaction.description.capitalized
+        amountLabel.text = viewModel.transaction.amount.formattedAmount()
+        accountLabel.text = viewModel.transaction.otherAccount
+        dateLabel.text = DateFormatterUtil.formattedDateForTrasaction(date: viewModel.transaction.date)
+        balanceBeforelabale.text = "Balance before: \(viewModel.balanceBefore().formattedAmount(addOperator: false))"
+        balanceAfterlabale.text = "Balance after: \(viewModel.balanceAfter().formattedAmount(addOperator: false))"
     }
     
     private func setupConstraints() {
@@ -87,10 +103,18 @@ class TransactionViewController: UIViewController {
         accountLabel.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
         accountLabel.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
         accountLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 0).activate()
+
+        balanceBeforelabale.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
+        balanceBeforelabale.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
+        balanceBeforelabale.topAnchor.constraint(equalTo: accountLabel.bottomAnchor, constant: 10).activate()
         
         amountLabel.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
         amountLabel.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
         amountLabel.topAnchor.constraint(equalTo: accountLabel.bottomAnchor, constant: 20).activate()
+        
+        balanceAfterlabale.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
+        balanceAfterlabale.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
+        balanceAfterlabale.topAnchor.constraint(equalTo: amountLabel.bottomAnchor, constant: 10).activate()
     }
     
     required init?(coder aDecoder: NSCoder) {

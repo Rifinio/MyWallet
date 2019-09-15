@@ -15,6 +15,9 @@ struct Transaction: Codable {
     let otherAccount: String
     let date: Date
     
+    var balanceBefore: Float?
+    var balanceAfter: Float?
+    
     func log() {
         print(id)
         print(amount)
