@@ -24,6 +24,7 @@
 		19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53642232E8898005EE3E3 /* HelperExtensions.swift */; };
 		19D53645232E8BAE005EE3E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53644232E8BAE005EE3E3 /* TransactionCell.swift */; };
 		19D53652232E9FA2005EE3E3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */; };
+		19D53654232EA092005EE3E3 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53653232EA092005EE3E3 /* TransactionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		19D53642232E8898005EE3E3 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		19D53644232E8BAE005EE3E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
+		19D53653232EA092005EE3E3 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				19D5363E232E5BB8005EE3E3 /* AccountViewModel.swift */,
+				19D53653232EA092005EE3E3 /* TransactionViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				19D5363B232E588A005EE3E3 /* DataStore.swift in Sources */,
 				19D53652232E9FA2005EE3E3 /* TransactionViewController.swift in Sources */,
 				19D53635232E528F005EE3E3 /* Account.swift in Sources */,
+				19D53654232EA092005EE3E3 /* TransactionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
