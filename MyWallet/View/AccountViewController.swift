@@ -139,6 +139,11 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tvc = TransactionViewController(viewModel: TransactionViewModel())
+        navigationController?.pushViewController(tvc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66
     }

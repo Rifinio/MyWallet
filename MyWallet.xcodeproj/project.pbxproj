@@ -23,6 +23,7 @@
 		19D53641232E633D005EE3E3 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D53640232E633D005EE3E3 /* transactions.json */; };
 		19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53642232E8898005EE3E3 /* HelperExtensions.swift */; };
 		19D53645232E8BAE005EE3E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53644232E8BAE005EE3E3 /* TransactionCell.swift */; };
+		19D53652232E9FA2005EE3E3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		19D53640232E633D005EE3E3 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
 		19D53642232E8898005EE3E3 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		19D53644232E8BAE005EE3E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				1912430D232D73C60070912E /* AccountViewController.swift */,
 				19D5362B232D81E9005EE3E3 /* CreditCardView.swift */,
 				19D53644232E8BAE005EE3E3 /* TransactionCell.swift */,
+				19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 				19D5363F232E5BB8005EE3E3 /* AccountViewModel.swift in Sources */,
 				19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */,
 				19D5363B232E588A005EE3E3 /* DataStore.swift in Sources */,
+				19D53652232E9FA2005EE3E3 /* TransactionViewController.swift in Sources */,
 				19D53635232E528F005EE3E3 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
