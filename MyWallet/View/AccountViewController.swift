@@ -9,6 +9,8 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    var viewModel: AccountViewModel!
+    let cellIdentifier = "TransactionsCell"
 
     // MARK: - UI Elements
     let mainView: UIView = {
@@ -32,7 +34,12 @@ class AccountViewController: UIViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
     }()
-    var viewModel: AccountViewModel!
+    let tableView: UITableView = {
+        let tv = UITableView(frame: .zero, style: .grouped)
+        tv.translatesAutoresizingMaskIntoConstraints = false
+        
+        return tv
+    }()
 
     init(viewModel: AccountViewModel) {
         super.init(nibName: nil, bundle: nil)
@@ -51,8 +58,6 @@ class AccountViewController: UIViewController {
         setupView()
         setupConstraints()
         setupData()
-        
-        viewModel.user?.account.logTransactions()
     }
     
     // MARK: - View setup
@@ -60,15 +65,17 @@ class AccountViewController: UIViewController {
         setupNavigationBar()
         view.addSubview(mainView)
         mainView.addSubview(cardView)
+        mainView.addSubview(tableView)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     private func setupData() {
         guard let user = viewModel.user else {return}
-        cardView.accountNumber = user.account.account
-        cardView.balance = "€ \(user.account.balance)"
-        cardView.holderName = user.fullName
-        cardView.providerImage = AppStyle.Card.providerMaestroImage
-        cardView.backgrounImage = AppStyle.Card.backgroundImage
+        cardView.setupCardFor(user: user)
+
+        user.account.logTransactions()
     }
 
     private func setupConstraints() {
@@ -82,6 +89,11 @@ class AccountViewController: UIViewController {
         cardView.leadingAnchor.constraint(equalTo: mainView.leadingAnchor, constant: edgeInset.left).activate()
         cardView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: edgeInset.right).activate()
         cardView.heightAnchor.constraint(equalTo: cardView.widthAnchor, multiplier: 0.7).activate()
+        
+        tableView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).activate()
+        tableView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).activate()
+        tableView.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 20).activate()
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).activate()
     }
     
     func setupNavigationBar() {
@@ -95,9 +107,16 @@ class AccountViewController: UIViewController {
     }
 }
 
-extension NSLayoutConstraint {
-    func activate() {
-        isActive = true
+extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        cell.textLabel?.text = "hello"
+        return cell
+    }
+    
+    
 }
-

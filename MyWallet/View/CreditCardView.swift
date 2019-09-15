@@ -126,3 +126,13 @@ class CreditCardView: UIView {
     }
 }
 
+extension CreditCardView {
+    func setupCardFor(user: User) {
+        accountNumber = user.account.account
+        balance = "€ \(user.account.balance)"
+        holderName = user.fullName
+        providerImage = AppStyle.Card.providerMaestroImage
+        backgrounImage = AppStyle.Card.backgroundImage
+    }
+}
+

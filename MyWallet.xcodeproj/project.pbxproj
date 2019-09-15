@@ -21,6 +21,7 @@
 		19D5363B232E588A005EE3E3 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5363A232E588A005EE3E3 /* DataStore.swift */; };
 		19D5363F232E5BB8005EE3E3 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5363E232E5BB8005EE3E3 /* AccountViewModel.swift */; };
 		19D53641232E633D005EE3E3 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D53640232E633D005EE3E3 /* transactions.json */; };
+		19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53642232E8898005EE3E3 /* HelperExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		19D5363A232E588A005EE3E3 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		19D5363E232E5BB8005EE3E3 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		19D53640232E633D005EE3E3 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
+		19D53642232E8898005EE3E3 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */,
+				19D53642232E8898005EE3E3 /* HelperExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19D53637232E556C005EE3E3 /* Transaction.swift in Sources */,
+				19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */,
 				1912430E232D73C60070912E /* AccountViewController.swift in Sources */,
 				1912430C232D73C60070912E /* AppDelegate.swift in Sources */,
 				19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */,

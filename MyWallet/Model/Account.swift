@@ -8,7 +8,14 @@
 
 import Foundation
 
+enum AccountType {
+    case checkingAccount
+    case savingsAccount
+    case moneyMarketAccount
+}
+
 struct Account : Codable {
+    let type: AccountType = .checkingAccount // it should come defined in the Account Json. (for simplicity) 
     let account: String
     let balance: Float
     let transactions: [Transaction]?
