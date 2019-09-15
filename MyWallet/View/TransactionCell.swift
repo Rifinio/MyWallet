@@ -50,7 +50,7 @@ class TransactionCell: UITableViewCell {
         contentView.addSubview(amountLabel)
         contentView.addSubview(dateLabel)
     }
-    
+
     private func setupConstraints() {
         iconImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10).activate()
         iconImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).activate()
@@ -75,11 +75,10 @@ class TransactionCell: UITableViewCell {
         descriptionLabel.font = AppStyle.Font.regular(15)
         descriptionLabel.textColor = AppStyle.Color.black
         
-        dateLabel.font = AppStyle.Font.light(14)
+        dateLabel.font = AppStyle.Font.light(13)
         dateLabel.textColor = AppStyle.Color.gray
-        
+
         amountLabel.font = AppStyle.Font.bold(17)
-        amountLabel.textColor = AppStyle.Color.black
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -89,5 +88,4 @@ class TransactionCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-
 }
