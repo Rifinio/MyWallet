@@ -100,7 +100,8 @@ class AccountViewController: UIViewController {
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.navigationBar.tintColor = .clear
         navigationController?.navigationBar.backgroundColor = .clear
-        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppStyle.Font.bold(24) as Any]
     }
     
@@ -131,6 +132,7 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
             cell.descriptionLabel.text = transaction.description
             cell.dateLabel.text = DateFormatterUtil.formattedDateForTrasaction(date: transaction.date)
             cell.amountLabel.text = transaction.amount.formattedAmount()
+            cell.amountLabel.textColor = transaction.amount < 0 ? AppStyle.Color.flatRed : AppStyle.Color.flatGreen
             let iconName = viewModel.iconNameFor(transaction: transaction)
             cell.iconImageView.image = UIImage(named: iconName)
         }
@@ -140,7 +142,9 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tvc = TransactionViewController(viewModel: TransactionViewModel())
+        guard let t = viewModel.transationAt(index: indexPath.row) else { return }
+        let vm = TransactionViewModel(transaction: t)
+        let tvc = TransactionViewController(viewModel: vm)
         navigationController?.pushViewController(tvc, animated: true)
     }
     
