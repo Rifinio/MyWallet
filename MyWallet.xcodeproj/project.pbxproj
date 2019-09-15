@@ -18,6 +18,7 @@
 		19D53635232E528F005EE3E3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53634232E528F005EE3E3 /* Account.swift */; };
 		19D53637232E556C005EE3E3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53636232E556C005EE3E3 /* Transaction.swift */; };
 		19D53639232E5623005EE3E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53638232E5623005EE3E3 /* User.swift */; };
+		19D5363B232E588A005EE3E3 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5363A232E588A005EE3E3 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		19D53634232E528F005EE3E3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		19D53636232E556C005EE3E3 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		19D53638232E5623005EE3E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		19D5363A232E588A005EE3E3 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +89,14 @@
 		1912430A232D73C60070912E /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
-				19D53633232E5271005EE3E3 /* Model */,
 				1912430B232D73C60070912E /* AppDelegate.swift */,
+				19D53633232E5271005EE3E3 /* Model */,
 				19D53629232D811A005EE3E3 /* View */,
 				19D53632232D8A97005EE3E3 /* Style */,
 				19D5362F232D8A2A005EE3E3 /* Helpers */,
 				19D5362A232D817E005EE3E3 /* Ressources */,
 				19124317232D73C70070912E /* Info.plist */,
+				19D5363A232E588A005EE3E3 /* DataStore.swift */,
 			);
 			path = MyWallet;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				19D53639232E5623005EE3E3 /* User.swift in Sources */,
 				19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */,
 				19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */,
+				19D5363B232E588A005EE3E3 /* DataStore.swift in Sources */,
 				19D53635232E528F005EE3E3 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
