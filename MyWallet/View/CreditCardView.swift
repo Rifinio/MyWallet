@@ -67,7 +67,7 @@ class CreditCardView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
-        label.font = AppStyle.Font.bold(35)
+        label.font = AppStyle.Font.bold(40)
         return label
     }()
     private let labelAccountName: UILabel = {
@@ -129,7 +129,7 @@ class CreditCardView: UIView {
 extension CreditCardView {
     func setupCardFor(user: User) {
         accountNumber = user.account.account
-        balance = user.account.balance.formattedAmount()
+        balance = user.account.balance.formattedAmount(addOperator: false)
         holderName = user.fullName
         providerImage = AppStyle.Card.providerMaestroImage
         backgrounImage = AppStyle.Card.backgroundImage

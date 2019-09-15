@@ -13,14 +13,15 @@ class TransactionViewController: UIViewController {
     var viewModel: TransactionViewModel!
     let balanceBeforelabale: UILabel = {
         let l = UILabel()
+        l.textAlignment = .right
         l.translatesAutoresizingMaskIntoConstraints = false
         
         return l
     }()
     let balanceAfterlabale: UILabel = {
         let l = UILabel()
+        l.textAlignment = .right
         l.translatesAutoresizingMaskIntoConstraints = false
-        
         return l
     }()
     let descriptionLabel: UILabel = {
@@ -32,7 +33,7 @@ class TransactionViewController: UIViewController {
     let amountLabel: UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textAlignment = .center
+        l.textAlignment = .right
         return l
     }()
     let accountLabel: UILabel = {
@@ -67,6 +68,11 @@ class TransactionViewController: UIViewController {
         amountLabel.font = AppStyle.Font.bold(50)
         amountLabel.textColor = viewModel.transaction.amount < 0 ?
             AppStyle.Color.flatRed : AppStyle.Color.flatGreen
+        
+        balanceBeforelabale.font = AppStyle.Font.bold(15)
+        balanceBeforelabale.textColor = AppStyle.Color.darkGray
+        balanceAfterlabale.font = AppStyle.Font.bold(19)
+        balanceAfterlabale.textColor = AppStyle.Color.darkGray
     }
     
     private func setupView() {
@@ -106,11 +112,11 @@ class TransactionViewController: UIViewController {
 
         balanceBeforelabale.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
         balanceBeforelabale.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
-        balanceBeforelabale.topAnchor.constraint(equalTo: accountLabel.bottomAnchor, constant: 10).activate()
+        balanceBeforelabale.topAnchor.constraint(equalTo: accountLabel.bottomAnchor, constant: 50).activate()
         
         amountLabel.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
         amountLabel.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()
-        amountLabel.topAnchor.constraint(equalTo: accountLabel.bottomAnchor, constant: 20).activate()
+        amountLabel.topAnchor.constraint(equalTo: balanceBeforelabale.bottomAnchor, constant: 20).activate()
         
         balanceAfterlabale.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()
         balanceAfterlabale.trailingAnchor.constraint(equalTo: descriptionLabel.trailingAnchor).activate()

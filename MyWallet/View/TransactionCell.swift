@@ -41,7 +41,7 @@ class TransactionCell: UITableViewCell {
         
         setupView()
         setupConstraints()
-        styleComponents()
+        styleView()
     }
     
     private func setupView() {
@@ -71,7 +71,7 @@ class TransactionCell: UITableViewCell {
         dateLabel.topAnchor.constraint(equalTo: contentView.centerYAnchor).activate()
     }
     
-    private func styleComponents() {
+    private func styleView() {
         descriptionLabel.font = AppStyle.Font.regular(15)
         descriptionLabel.textColor = AppStyle.Color.black
         
