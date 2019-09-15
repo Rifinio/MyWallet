@@ -135,7 +135,6 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
             cell.iconImageView.image = UIImage(named: iconName)
         }
 
-        
         return cell
     }
     
@@ -145,6 +144,8 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         let vm = TransactionViewModel(transaction: t, user: user)
         let tvc = TransactionViewController(viewModel: vm)
         navigationController?.pushViewController(tvc, animated: true)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
