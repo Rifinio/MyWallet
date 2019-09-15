@@ -13,3 +13,10 @@ extension NSLayoutConstraint {
         isActive = true
     }
 }
+
+extension Float {
+    func formattedAmount() -> String {
+        return "€ \(self)"
+    }
+}
+

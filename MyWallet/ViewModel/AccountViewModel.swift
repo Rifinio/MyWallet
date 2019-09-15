@@ -23,4 +23,24 @@ class AccountViewModel {
             user = User(fullName: "A.BOUGAMZA", account: account)
         }
     }
+    
+    func numberOfTransactions() -> Int {
+        return user?.account.transactions?.count ?? 0
+    }
+    
+    func transationAt(index: Int) -> Transaction? {
+        guard let user = user,
+            let transactions = user.account.transactions,
+            index >= 0,
+            index < transactions.count else { return nil }
+        return transactions[index]
+    }
+    
+    func iconNameFor(transaction: Transaction) -> String {
+        if transaction.amount < 0 {
+            return "outcoming"
+        } else {
+            return "incoming"
+        }
+    }
 }

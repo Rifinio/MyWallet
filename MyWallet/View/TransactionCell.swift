@@ -19,14 +19,12 @@ class TransactionCell: UITableViewCell {
     let dateLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .darkGray
         label.text = "date"
         return label
     }()
     let amountLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.textColor = .black
         label.adjustsFontSizeToFitWidth = true
         label.text = "-999.0"
         return label

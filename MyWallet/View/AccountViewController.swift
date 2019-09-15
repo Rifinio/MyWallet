@@ -35,7 +35,7 @@ class AccountViewController: UIViewController {
         return v
     }()
     let tableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .grouped)
+        let tv = UITableView(frame: .zero, style: .plain)
         tv.translatesAutoresizingMaskIntoConstraints = false
         
         return tv
@@ -66,9 +66,7 @@ class AccountViewController: UIViewController {
         view.addSubview(mainView)
         mainView.addSubview(cardView)
         mainView.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(TransactionCell.self, forCellReuseIdentifier: cellIdentifier)
+        setupTableView()
     }
     
     private func setupData() {
@@ -92,11 +90,11 @@ class AccountViewController: UIViewController {
         
         tableView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor).activate()
         tableView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor).activate()
-        tableView.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 20).activate()
+        tableView.topAnchor.constraint(equalTo: cardView.bottomAnchor, constant: 10).activate()
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10).activate()
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -105,22 +103,43 @@ class AccountViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: AppStyle.Font.bold(24) as Any]
     }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TransactionCell.self, forCellReuseIdentifier: cellIdentifier)
+        
+        let headerViewLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: tableView.frame.width, height: 50)))
+        headerViewLabel.text = "Transactions"
+        headerViewLabel.font = AppStyle.Font.bold(25)
+        headerViewLabel.backgroundColor = AppStyle.Color.white
+        tableView.tableHeaderView = headerViewLabel
+    }
+    
 }
 
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.numberOfTransactions()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TransactionCell
+        
+        if let transaction = viewModel.transationAt(index: indexPath.row) {
+            cell.descriptionLabel.text = transaction.description
+            cell.dateLabel.text = "10 mai"
+            cell.amountLabel.text = transaction.amount.formattedAmount()
+            let iconName = viewModel.iconNameFor(transaction: transaction)
+            cell.iconImageView.image = UIImage(named: iconName)
+        }
 
-        cell.iconImageView.image = UIImage(named: "outcoming")
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 66
     }
 
 }
