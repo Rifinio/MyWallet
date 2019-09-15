@@ -15,6 +15,9 @@
 		19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362B232D81E9005EE3E3 /* CreditCardView.swift */; };
 		19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362D232D884D005EE3E3 /* AppStyle.swift */; };
 		19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */; };
+		19D53635232E528F005EE3E3 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53634232E528F005EE3E3 /* Account.swift */; };
+		19D53637232E556C005EE3E3 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53636232E556C005EE3E3 /* Transaction.swift */; };
+		19D53639232E5623005EE3E3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53638232E5623005EE3E3 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		19D5362B232D81E9005EE3E3 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		19D5362D232D884D005EE3E3 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Utils.swift"; sourceTree = "<group>"; };
+		19D53634232E528F005EE3E3 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		19D53636232E556C005EE3E3 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		19D53638232E5623005EE3E3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		1912430A232D73C60070912E /* MyWallet */ = {
 			isa = PBXGroup;
 			children = (
+				19D53633232E5271005EE3E3 /* Model */,
 				1912430B232D73C60070912E /* AppDelegate.swift */,
 				19D53629232D811A005EE3E3 /* View */,
 				19D53632232D8A97005EE3E3 /* Style */,
@@ -132,6 +139,16 @@
 				19D5362D232D884D005EE3E3 /* AppStyle.swift */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		19D53633232E5271005EE3E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19D53634232E528F005EE3E3 /* Account.swift */,
+				19D53636232E556C005EE3E3 /* Transaction.swift */,
+				19D53638232E5623005EE3E3 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,11 +251,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D53637232E556C005EE3E3 /* Transaction.swift in Sources */,
 				1912430E232D73C60070912E /* AccountViewController.swift in Sources */,
 				1912430C232D73C60070912E /* AppDelegate.swift in Sources */,
 				19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */,
+				19D53639232E5623005EE3E3 /* User.swift in Sources */,
 				19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */,
 				19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */,
+				19D53635232E528F005EE3E3 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
