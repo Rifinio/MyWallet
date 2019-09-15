@@ -14,9 +14,9 @@ struct Account : Codable {
     let transactions: [Transaction]?
     
     enum CodingKeys: String, CodingKey {
-        case account = "account"
-        case balance = "balance"
-        case transactions = "transactions"
+        case account
+        case balance
+        case transactions
     }
     
     init (from decoder: Decoder) throws {
@@ -28,6 +28,8 @@ struct Account : Codable {
     }
     
     func logTransactions() {
+        print(self.account)
+        print(self.balance)
         guard let transactions = transactions else {return}
         for t in transactions {
             t.log()

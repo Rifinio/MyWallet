@@ -11,7 +11,7 @@ import Foundation
 struct Transaction: Codable {
     let id: String
     let amount: Float
-    let description: String?
+    let description: String
     let otherAccount: String
     let date: Date
     
@@ -24,11 +24,11 @@ struct Transaction: Codable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id = "id"
-        case amount = "amount"
-        case description = "description"
-        case otherAccount = "otherAccount"
-        case date = "date"
+        case id
+        case amount
+        case description
+        case otherAccount
+        case date
     }
     
     init (from decoder: Decoder) throws {
