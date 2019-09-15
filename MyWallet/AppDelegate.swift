@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+
+        let dataStore = DataStore()
+        let accountVM = AccountViewModel(dataStore: dataStore)
+        let accountVC = AccountViewController(viewModel: accountVM)
+        let navigationVC = UINavigationController(rootViewController: accountVC)
+        window?.rootViewController = navigationVC
+
         return true
     }
 
