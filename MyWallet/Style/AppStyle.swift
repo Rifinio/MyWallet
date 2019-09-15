@@ -9,6 +9,10 @@
 import UIKit
 
 struct AppStyle {
+    struct Color {
+        static let black: UIColor = .black
+        static let gray = UIColor(red: 170/255, green: 170/255, blue: 170/255, alpha: 1)
+    }
     struct Font {
         static let lightFontName = "GillSans-Light"
         static let regurlarFontName = "GillSans"
