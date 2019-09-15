@@ -22,6 +22,7 @@
 		19D5363F232E5BB8005EE3E3 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5363E232E5BB8005EE3E3 /* AccountViewModel.swift */; };
 		19D53641232E633D005EE3E3 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D53640232E633D005EE3E3 /* transactions.json */; };
 		19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53642232E8898005EE3E3 /* HelperExtensions.swift */; };
+		19D53645232E8BAE005EE3E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53644232E8BAE005EE3E3 /* TransactionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		19D5363E232E5BB8005EE3E3 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		19D53640232E633D005EE3E3 /* transactions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions.json; sourceTree = "<group>"; };
 		19D53642232E8898005EE3E3 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		19D53644232E8BAE005EE3E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 			children = (
 				1912430D232D73C60070912E /* AccountViewController.swift */,
 				19D5362B232D81E9005EE3E3 /* CreditCardView.swift */,
+				19D53644232E8BAE005EE3E3 /* TransactionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 			files = (
 				19D53637232E556C005EE3E3 /* Transaction.swift in Sources */,
 				19D53643232E8898005EE3E3 /* HelperExtensions.swift in Sources */,
+				19D53645232E8BAE005EE3E3 /* TransactionCell.swift in Sources */,
 				1912430E232D73C60070912E /* AccountViewController.swift in Sources */,
 				1912430C232D73C60070912E /* AppDelegate.swift in Sources */,
 				19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */,
