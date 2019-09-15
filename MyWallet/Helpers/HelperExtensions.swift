@@ -17,7 +17,7 @@ class DateFormatterUtil {
     }
     
     static func formattedDateForTrasaction(date: Date) -> String? {
-        dateFormatter.dateFormat = "dd MMM"
+        dateFormatter.dateFormat = "dd MMM, HH:mm:ss"
         return dateFormatter.string(from: date)
     }
 }
@@ -30,7 +30,8 @@ extension NSLayoutConstraint {
 
 extension Float {
     func formattedAmount() -> String {
-        return "€ \(self)"
+        let _operator = self < 0 ? "-" : "+"
+        return "€ \(_operator)\(abs(self))"
     }
 }
 
