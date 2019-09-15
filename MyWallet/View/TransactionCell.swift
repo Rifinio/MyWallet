@@ -63,7 +63,7 @@ class TransactionCell: UITableViewCell {
         amountLabel.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 1/5).activate()
         
         descriptionLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 10).activate()
-        descriptionLabel.trailingAnchor.constraint(equalTo: amountLabel.leadingAnchor, constant: 10).activate()
+        descriptionLabel.trailingAnchor.constraint(equalTo: amountLabel.leadingAnchor, constant: -5).activate()
         descriptionLabel.bottomAnchor.constraint(equalTo: contentView.centerYAnchor).activate()
         
         dateLabel.leadingAnchor.constraint(equalTo: descriptionLabel.leadingAnchor).activate()

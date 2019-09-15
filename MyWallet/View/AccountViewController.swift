@@ -147,8 +147,8 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
 
 
 class DateFormatterUtil {
-    static let dateFormatter = DateFormatter()
-    
+    private static let dateFormatter = DateFormatter()
+
     static func stringToDate(dateStr: String) -> Date? {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return dateFormatter.date(from: dateStr)
