@@ -111,13 +111,14 @@ class AccountViewController: UIViewController {
         
         let headerViewLabel = UILabel(frame: CGRect(origin: .zero, size: CGSize(width: tableView.frame.width, height: 50)))
         headerViewLabel.text = "Transactions"
-        headerViewLabel.font = AppStyle.Font.bold(25)
+        headerViewLabel.font = AppStyle.Font.bold(24)
         headerViewLabel.backgroundColor = AppStyle.Color.white
         tableView.tableHeaderView = headerViewLabel
     }
     
 }
 
+// MARK: - TableView delegate/datasource
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfTransactions()
@@ -128,7 +129,7 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let transaction = viewModel.transationAt(index: indexPath.row) {
             cell.descriptionLabel.text = transaction.description
-            cell.dateLabel.text = "10 mai"
+            cell.dateLabel.text = DateFormatterUtil.formattedDateForTrasaction(date: transaction.date)
             cell.amountLabel.text = transaction.amount.formattedAmount()
             let iconName = viewModel.iconNameFor(transaction: transaction)
             cell.iconImageView.image = UIImage(named: iconName)
@@ -142,4 +143,19 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
         return 66
     }
 
+}
+
+
+class DateFormatterUtil {
+    static let dateFormatter = DateFormatter()
+    
+    static func stringToDate(dateStr: String) -> Date? {
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return dateFormatter.date(from: dateStr)
+    }
+
+    static func formattedDateForTrasaction(date: Date) -> String? {
+        dateFormatter.dateFormat = "dd MMM"
+        return dateFormatter.string(from: date)
+    }
 }

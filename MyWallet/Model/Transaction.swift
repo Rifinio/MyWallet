@@ -40,10 +40,8 @@ struct Transaction: Codable {
         otherAccount = try container.decode(String.self, forKey: .otherAccount)
         
         // TODO: take the formatter out of here
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let dateStr = try container.decode(String.self, forKey: .date)
-        date = dateFormatter.date(from: dateStr)!
+        let str = try container.decode(String.self, forKey: .date)
+        date = DateFormatterUtil.stringToDate(dateStr: str)!
     }
 }
 
