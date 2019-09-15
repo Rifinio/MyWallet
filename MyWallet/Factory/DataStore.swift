@@ -8,7 +8,11 @@
 
 import Foundation
 
-class DataStore {
+protocol DataStoreProtocol {
+    func loadAccount() -> Account?
+}
+
+class DataStore: DataStoreProtocol {
     func loadAccount() -> Account? {
         if let path = Bundle.main.path(forResource: "transactions", ofType: "json") {
             do {

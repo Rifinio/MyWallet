@@ -41,6 +41,10 @@ class AccountViewController: UIViewController {
         setupView()
         setupConstraints()
         setupData()
+        
+        let dataStore = DataStore()
+        let account = dataStore.loadAccount()
+        account?.logTransactions()
     }
     
     // MARK: - View setup
@@ -48,6 +52,8 @@ class AccountViewController: UIViewController {
         setupNavigationBar()
         view.addSubview(mainView)
         mainView.addSubview(cardView)
+        
+        
     }
     
     private func setupData() {
