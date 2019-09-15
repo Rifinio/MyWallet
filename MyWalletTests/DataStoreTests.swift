@@ -27,4 +27,15 @@ class DataStoreTests: XCTestCase {
         XCTAssertEqual(account.transactions?.count, 5)
         XCTAssertEqual(account.type, AccountType.checkingAccount)
     }
+    
+    func testTransactionsAreSortedCorrectly() {
+        guard let transactions = account.transactions else {
+            XCTAssertTrue(false)
+            return
+        }
+
+        for i in 0..<transactions.count - 1 {
+            XCTAssertTrue(transactions[i] < transactions[i+1])
+        }
+    }
 }

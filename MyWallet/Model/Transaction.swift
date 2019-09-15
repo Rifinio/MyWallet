@@ -41,8 +41,7 @@ struct Transaction: Codable {
         amount = try Float(container.decode(String.self, forKey: .amount))!
         description = try container.decode(String.self, forKey: .description)
         otherAccount = try container.decode(String.self, forKey: .otherAccount)
-        
-        // TODO: take the formatter out of here
+
         let str = try container.decode(String.self, forKey: .date)
         date = DateFormatterUtil.stringToDate(dateStr: str)!
     }
