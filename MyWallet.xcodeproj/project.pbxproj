@@ -11,7 +11,6 @@
 		1912430E232D73C60070912E /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1912430D232D73C60070912E /* AccountViewController.swift */; };
 		19124313232D73C70070912E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19124312232D73C70070912E /* Assets.xcassets */; };
 		19124316232D73C70070912E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19124314232D73C70070912E /* LaunchScreen.storyboard */; };
-		19124321232D73C70070912E /* MyWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19124320232D73C70070912E /* MyWalletTests.swift */; };
 		19D5362C232D81E9005EE3E3 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362B232D81E9005EE3E3 /* CreditCardView.swift */; };
 		19D5362E232D884D005EE3E3 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D5362D232D884D005EE3E3 /* AppStyle.swift */; };
 		19D53631232D8A3F005EE3E3 /* UIView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53630232D8A3F005EE3E3 /* UIView+Utils.swift */; };
@@ -25,6 +24,8 @@
 		19D53645232E8BAE005EE3E3 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53644232E8BAE005EE3E3 /* TransactionCell.swift */; };
 		19D53652232E9FA2005EE3E3 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */; };
 		19D53654232EA092005EE3E3 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53653232EA092005EE3E3 /* TransactionViewModel.swift */; };
+		19D53656232ECAE2005EE3E3 /* DataStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D53655232ECAE2005EE3E3 /* DataStoreTests.swift */; };
+		19D53657232ECB34005EE3E3 /* transactions.json in Resources */ = {isa = PBXBuildFile; fileRef = 19D53640232E633D005EE3E3 /* transactions.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,6 @@
 		19124315232D73C70070912E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19124317232D73C70070912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1912431C232D73C70070912E /* MyWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		19124320232D73C70070912E /* MyWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWalletTests.swift; sourceTree = "<group>"; };
 		19124322232D73C70070912E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19D5362B232D81E9005EE3E3 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		19D5362D232D884D005EE3E3 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
@@ -60,6 +60,7 @@
 		19D53644232E8BAE005EE3E3 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		19D53651232E9FA2005EE3E3 /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		19D53653232EA092005EE3E3 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		19D53655232ECAE2005EE3E3 /* DataStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +118,7 @@
 		1912431F232D73C70070912E /* MyWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				19124320232D73C70070912E /* MyWalletTests.swift */,
+				19D53655232ECAE2005EE3E3 /* DataStoreTests.swift */,
 				19124322232D73C70070912E /* Info.plist */,
 			);
 			path = MyWalletTests;
@@ -279,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D53657232ECB34005EE3E3 /* transactions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19124321232D73C70070912E /* MyWalletTests.swift in Sources */,
+				19D53656232ECAE2005EE3E3 /* DataStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
