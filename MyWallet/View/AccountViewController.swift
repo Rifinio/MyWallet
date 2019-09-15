@@ -147,20 +147,4 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66
     }
-
-}
-
-
-class DateFormatterUtil {
-    private static let dateFormatter = DateFormatter()
-
-    static func stringToDate(dateStr: String) -> Date? {
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        return dateFormatter.date(from: dateStr)
-    }
-
-    static func formattedDateForTrasaction(date: Date) -> String? {
-        dateFormatter.dateFormat = "dd MMM"
-        return dateFormatter.string(from: date)
-    }
 }

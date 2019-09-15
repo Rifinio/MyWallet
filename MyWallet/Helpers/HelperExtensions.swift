@@ -8,6 +8,20 @@
 
 import UIKit
 
+class DateFormatterUtil {
+    private static let dateFormatter = DateFormatter()
+    
+    static func stringToDate(dateStr: String) -> Date? {
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return dateFormatter.date(from: dateStr)
+    }
+    
+    static func formattedDateForTrasaction(date: Date) -> String? {
+        dateFormatter.dateFormat = "dd MMM"
+        return dateFormatter.string(from: date)
+    }
+}
+
 extension NSLayoutConstraint {
     func activate() {
         isActive = true
